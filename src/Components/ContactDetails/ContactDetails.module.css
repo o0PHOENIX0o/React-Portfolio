@@ -25,12 +25,49 @@
 }
 
 .title{
-    min-height: 10rem;
+    min-height: 5rem;
     grid-area: 1 / 1 / 2 / 3;
+    animation: slideRight 0.8s ease-in-out;
+    background-color: hsl(198.1deg 41.9% 21.96%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title hr{
+    width: 100%;
 }
 
 .mail{
     grid-area: 1 / 3 / 3 / 4;
+    animation: slideDown 0.5s ease-in-out;
+}
+
+.mail >div{
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mailContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: #fbfbfb3b;
+    border-radius: 2rem;
+    padding: 0.4rem 1rem;
+}
+
+.mailContainer img{
+    height: 2rem;
+}
+
+.mailContainer p{
+    margin: 0;
 }
 
 .profile{
@@ -55,13 +92,86 @@
 
 .linkedin{
     grid-row: span 2;
+    animation: slideUp 0.5s ease-in-out;
+}
+
+.linkedin >div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+}
+
+.linkedinContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: #fbfbfb3b;
+    border-radius: 2rem;
+    padding: 1rem 0.7rem;
+}
+.linkedinContainer p{
+    text-align: center;
+    margin: 0;
+}
+
+.linkedinLogo{
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 7px;
+    background-color: white;
+    border-radius: 10px;
+}
+.linkedinLogo img{
+    height: 1.5rem;
 }
 
 .github{
     min-height: 10rem;
     grid-column: span 2;
+    animation: slideLeft 0.8s ease-in-out;
 }
 
+.github >div{
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.githubLogoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: #fbfbfb3b;
+    border-radius: 2rem;
+    padding: 0.5rem;
+}
+.githubLogoContainer p{
+    margin: 0;
+}
+
+.githubLogo img{
+    height: 3rem;
+    position: relative;
+}
+
+
+.githubLogo{position: relative; z-index: 1;}
+.githubLogo::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 1rem;
+    width: 80%;
+    height: 80%;
+    z-index: -1;
+}
 
 
 
@@ -122,11 +232,20 @@
     }
 
     .title{
-        grid-area: 1 / 2 / 2/ 4;
+        grid-area: 2 / 1 / 3 / 4;
+        
     }
 
     .mail{
-        grid-area: 2 / 1 / 3 / 4;
+        grid-area: 1 / 2 / 2/ 4;
+    }
+
+    .mailContainer{
+        flex-direction: column;
+    }
+    .mailContainer p{
+        margin-bottom: 10px;
+        text-align: center;
     }
 
     .profile{
@@ -138,8 +257,23 @@
         grid-row: unset;
     }
 
-   
+    .linkedinContainer{
+        flex-direction: column;
+        gap: 0;
+    }
+    
 
+    .githubLogoContainer{
+        flex-direction: column;
+        gap: 0;
+    }
+    .githubLogoContainer p{
+        text-align: center;
+
+        margin-bottom: 10px;
+    }
+
+    
 
 }
 

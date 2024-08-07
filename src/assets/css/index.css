@@ -38,12 +38,11 @@ body{
   font-size: 18px; 
   padding: 8px 15px;
   display: block; 
- 
   transition: background-color 0.3s; 
 
 }
 
-.header ul li a:hover {
+.header ul li:hover {
   background-color: #575757;  
 }
 
