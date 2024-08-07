@@ -1,0 +1,339 @@
+:root {
+    --backgroundColor: hsl(252deg 5.45% 20.3%);
+    --backgroundColor2: hsl(198.1deg 41.9% 21.96%);
+    --heading: #fff;
+    --heading2: #00c0ff;
+    --letterSpacing: 5px;
+    --subHeading: #ddd2d2;
+    --text-gradient-yellow: linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%));
+    --jet: hsl(0, 0%, 22%);
+    --orange-yellow-crayola: hsl(45, 100%, 72%);
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
+.keyword {
+    color: var(--orange-yellow-crayola);
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+    width: 100%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 1rem;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.card {
+    background-color: var(--backgroundColor);
+    color: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: transform 0.5s ease;
+}
+
+/* ----------aboutMe------------------- */
+
+.aboutMe {
+    grid-column: 1 / span 2;
+    animation: slideRight 1s ease-in-out;
+}
+
+.aboutMe p {
+    letter-spacing: calc(var(--letterSpacing) - 2px);
+    font-size: 1.1rem;
+}
+
+/* ------------------learning----------------------- */
+
+.learning {
+    grid-area: 1 / 3 / 3 / 4;
+    animation: slideDown 1s ease-in-out;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+
+.logo img {
+    height: 6em;
+    padding: 1.5em;
+    transition: filter 300ms;
+    animation: logo-spin 5s infinite linear;
+}
+
+.logo img:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+/* ------------------learning-content------------------- */
+
+.learningContent {
+    grid-column: 3;
+    background-color: var(--backgroundColor2);
+    animation: slideLeft 0.5s ease-in-out forwards;
+}
+
+.learningContent h2 {
+    margin: 0;
+}
+
+/* ---------------------title------------------ */
+
+.title {
+    grid-row: 2 / 3;
+    background-color: var(--backgroundColor2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideRight 0.5s ease-in-out;
+}
+
+.title h2 {
+    letter-spacing: calc(var(--letterSpacing) - 1px);
+    margin: 0;
+}
+
+/* --------------------profile-------------------- */
+
+.profile {
+    grid-row: 2 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.profile h2 {
+    color: var(--heading2);
+    letter-spacing: var(--letterSpacing);
+    background: transparent;
+    backdrop-filter: blur(5px);
+}
+
+.profileImg img {
+    height: 8rem;
+    filter: drop-shadow(0 0 2em var(--heading2));
+}
+
+/* -------------------skills--------------------- */
+
+.skills {
+    grid-row: 3 / 5;
+    animation: slideUp 1s ease-in-out;
+}
+
+.skillContainer {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.skillContainer img {
+    height: 4rem;
+    width: 4rem;
+}
+
+.embedded, .MySQL {
+    transform: scale(1.5);
+}
+
+.skillContainer > div {
+    border-radius: 50%;
+}
+
+/* -------------------education-------------------- */
+
+.education {
+    grid-column: 2 / 4;
+    animation: slideLeft 1s ease-in-out;
+}
+
+.timelineItem {
+    list-style: none;
+    position: relative;
+    margin: 1.5rem 0;
+}
+
+.timelineItem::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -20px;
+    height: 6px;
+    width: 6px;
+    background: var(--text-gradient-yellow);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px var(--jet);
+}
+
+.timelineItem:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    left: -18px;
+    width: 2px;
+    height: calc(100% + 20px);
+    background: #b5a67952;
+}
+
+.degree {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.degree h4 {
+    margin: 0 0 5px 0;
+}
+
+.institution, .duration {
+    color: var(--subHeading);
+}
+
+.institution {
+    font-style: italic;
+}
+
+.description {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #e6e6e6;
+}
+
+/* Keyframes for sliding effects */
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(140%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-140%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(-140%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(140%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Media queries */
+
+@media (max-width: 600px) {
+    h2 {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .mainContainer {
+        padding: 2rem 1rem;
+    }
+
+    .aboutMe {
+        grid-column: 1 / span 3;
+        animation: slideDown 1s ease-in-out;
+    }
+
+    .learning {
+        grid-area: 3 / 1 / 4 / 3;
+        animation: slideRight 1s ease-in-out;
+    }
+
+    .learningContent {
+        grid-area: 3 / 3 / 4 / 4;
+        animation-duration: 1s;
+    }
+
+    .profile {
+        grid-area: 2 / 1 / 3 / 3;
+    }
+
+    .title {
+        animation: slideLeft 0.7s ease-in-out;
+    }
+
+    .skills {
+        grid-area: 4 / span 3;
+        animation: slideRight 1s ease-in-out;
+    }
+
+    .education {
+        grid-area: 5 / span 3;
+        animation: slideUp 1s ease-in-out;
+    }
+
+    
+
+    .learningContent p {
+        text-align: center;
+    }
+
+    .logo img {
+        height: 3em;
+    }
+
+    .logo {
+        height: unset;
+    }
+}
+
+@media (min-width: 980px) {
+    .container {
+        width: 60rem;
+    }
+}
