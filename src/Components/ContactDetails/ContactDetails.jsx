@@ -1,9 +1,11 @@
 import React from "react";
 import styles from './ContactDetails.module.css';
-import profileLogo from '../../assets/profile.png';
+import profileLogo from '../../assets/profile/profile.png';
 import GitHubLogo from '../../assets/logos/github.svg'
 import LinkedinLogo from '../../assets/logos/linkedin.svg'
 import MailLogo from '../../assets/logos/mail.svg'
+import profilePic from '../../assets/profile/photo.jpg' 
+import gitProile from '../../assets/profile/github.jpg' 
 
 function ContactDetails() {
     return (
@@ -16,13 +18,15 @@ function ContactDetails() {
                         <hr />
                     </div>
 
-                    <div className={`${styles.mail} ${styles.card}`}>
+                    <div onClick={() => window.location.href = 'mailto:ujjwallehri33@gmail.com'} className={`${styles.mail} ${styles.card}`}>
                         <h2>Mail me</h2>
                         <hr />
                         <div>
-                            <div className={styles.mailContainer}>
-                                <img src={MailLogo} alt="MailLogo" />
-                                <p>ujjwallehri33 @gmail.com</p>
+                            <div className={`${styles.mailContainer} ${styles.hoverdiv }`}>
+                                <div className={styles.mailProfile}>
+                                    <img src={profilePic} alt="MailLogo" /> 
+                                </div>
+                                <p>ujjwallehri33@gmail.com</p>
                             </div>
                         </div>
                     </div>
@@ -38,9 +42,10 @@ function ContactDetails() {
                         <h2>LinkedIn Profile</h2>
                         <hr />
                         <div>
-                            <div className={styles.linkedinContainer}>
+                            <div onClick={() => window.open('https://www.linkedin.com/in/ujjwal-lehri/', '_blank')} className={`${styles.linkedinContainer} ${styles.hoverdiv }`}>
+                            
                                 <div className={styles.linkedinLogo}>
-                                    <img src={LinkedinLogo} alt="linkedinLogo" />
+                                    <img src={profilePic} alt="linkedinLogo" />
                                 </div>
                                 <p>Connect with me on LinkedIn</p>
                             </div>
@@ -53,9 +58,9 @@ function ContactDetails() {
                         <h2>GitHub Profile</h2>
                         <hr />
                         <div>
-                            <div className={styles.githubLogoContainer}>
+                            <div onClick={() => window.open('https://github.com/o0PHOENIX0o', '_blank')} className={`${styles.githubLogoContainer} ${styles.hoverdiv }`}> 
                                 <div className={styles.githubLogo}>
-                                    <img src={GitHubLogo} alt="GitHubLogo" />
+                                    <img src={gitProile} alt="GitHubLogo" />
                                 </div>
                                 <p>Explore my projects.</p>
                             </div>

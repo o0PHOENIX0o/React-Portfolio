@@ -50,24 +50,32 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .mailContainer{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    justify-content: space-between;
+    gap: 1rem;
     background-color: #fbfbfb3b;
     border-radius: 2rem;
     padding: 0.4rem 1rem;
 }
 
-.mailContainer img{
-    height: 2rem;
-}
 
 .mailContainer p{
+    word-wrap: break-word;
     margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.mailProfile{
+    position: relative;
+    z-index: 1;
 }
 
 .profile{
@@ -79,6 +87,7 @@
 }
 
 .profile h2 {
+    text-align: center;
     color: var(--heading2);
     letter-spacing: var(--letterSpacing);
     background: transparent;
@@ -104,28 +113,25 @@
 
 .linkedinContainer{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 1rem;
     background-color: #fbfbfb3b;
     border-radius: 2rem;
-    padding: 1rem 0.7rem;
+    padding: 0.4rem 1rem;
 }
 .linkedinContainer p{
-    text-align: center;
     margin: 0;
+    position: relative;
+    z-index: 1;
 }
 
 .linkedinLogo{
-    width: 1.5rem;
-    height: 1.5rem;
-    padding: 7px;
-    background-color: white;
     border-radius: 10px;
+    position: relative;
+    z-index: 1;
 }
-.linkedinLogo img{
-    height: 1.5rem;
-}
+
 
 .github{
     min-height: 10rem;
@@ -138,41 +144,62 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .githubLogoContainer{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    justify-content: space-between;
+    gap: 1rem;
     background-color: #fbfbfb3b;
     border-radius: 2rem;
     padding: 0.5rem;
 }
 .githubLogoContainer p{
     margin: 0;
-}
-
-.githubLogo img{
-    height: 3rem;
     position: relative;
+    z-index: 1;
 }
 
+
+.hoverdiv {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+  
+.hoverdiv::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 0;
+    /* background: linear-gradient(170deg, rgba(2, 0, 36, 1) 0%, rgba(27, 73, 94, 1) 50%, rgba(30, 100, 130, 1) 75%, rgba(38, 130, 170, 1) 100%); */
+    background:#248db1;
+    transition: height 0.5s ease-in-out, width 0.5s ease-in-out;
+    border-radius: 50% 50% 50% 0% / 100% 100% 0% 0%;
+ }
+  
+.hoverdiv:hover::before {
+    height: 150%;
+    width: 120%;
+}
 
 .githubLogo{position: relative; z-index: 1;}
-.githubLogo::after{
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    border-radius: 1rem;
-    width: 80%;
-    height: 80%;
-    z-index: -1;
-}
 
+
+
+.mailProfile img, .linkedinLogo img, .githubLogo img{
+    height: 3rem;
+    border-radius: 50%;
+    width: 3rem;
+}
 
 
 @keyframes slideUp {
@@ -220,8 +247,21 @@
 }
 
 
+@keyframes scaleUp {
+    0%{
+        transform: scaleY(0);
+    }100%{
+        transform: scaleY(1);
+    }
+}
 
 
+
+@media (max-width: 680px) {
+    .mailContainer p{
+        max-width: 100px;
+    }
+}
 @media (max-width: 600px) {
     h2 {
         font-size: 1rem;
@@ -233,33 +273,46 @@
 
     .title{
         grid-area: 2 / 1 / 3 / 4;
-        
+        animation: scaleUp 0.5s ease-in-out;
     }
 
     .mail{
         grid-area: 1 / 2 / 2/ 4;
+        animation: slideDown 1s ease-in-out;
     }
 
     .mailContainer{
         flex-direction: column;
     }
+
     .mailContainer p{
         margin-bottom: 10px;
         text-align: center;
+        /* display: flex;
+        flex-direction: column; */
     }
 
     .profile{
-        grid-area: 1 / 1
+        grid-area: 1 / 1;
+        animation: slideDown 0.5s ease-in-out;
     }
-
+  
 
     .linkedin{
         grid-row: unset;
+        animation: slideUp 1s ease-in-out;
     }
 
     .linkedinContainer{
         flex-direction: column;
         gap: 0;
+    }
+    .linkedinContainer p{
+        text-align: center;
+    }
+
+    .github{
+        animation: slideUp 0.5s ease-in-out;
     }
     
 
@@ -272,6 +325,8 @@
 
         margin-bottom: 10px;
     }
+
+
 
     
 

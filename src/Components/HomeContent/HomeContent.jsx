@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './home.module.css'
 
-import profileLogo from '../../assets/profile.png';
+import profileLogo from '../../assets/profile/profile.png';
 import reactLogo from '../../assets/logos/react.svg';
 import cpp from '../../assets/logos/cpp.svg';
 import css from '../../assets/logos/css.svg';
