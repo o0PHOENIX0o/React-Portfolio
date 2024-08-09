@@ -12,11 +12,12 @@
 
 h2 {
     margin-bottom: 0;
+    
 }
 
-body{
-    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
+
+
+
 
 .keyword {
     color: var(--orange-yellow-crayola);
@@ -128,6 +129,7 @@ body{
     letter-spacing: var(--letterSpacing);
     background: transparent;
     backdrop-filter: blur(5px);
+    text-align: center;
 }
 
 .profileImg img {

@@ -1,7 +1,9 @@
 body{
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   background-color: hsl(0, 0%, 7%);
   color: #fff;
 }
+
 
 #root{
   display: flex;
@@ -52,6 +54,17 @@ body{
 
 
 
+/* ------------projects---------------- */
+.projectList {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+
+
+
 
 @media (max-width: 600px) {
   .header ul li {
@@ -62,6 +75,8 @@ body{
     width: -webkit-fill-available;
   }
 }
+
+
 
 @media (max-width:350px) {
   .header ul li a { font-size: 12px;}  
