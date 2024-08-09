@@ -1,9 +1,6 @@
 import React from "react";
 import styles from './ContactDetails.module.css';
 import profileLogo from '../../assets/profile/profile.png';
-import GitHubLogo from '../../assets/logos/github.svg'
-import LinkedinLogo from '../../assets/logos/linkedin.svg'
-import MailLogo from '../../assets/logos/mail.svg'
 import profilePic from '../../assets/profile/photo.jpg' 
 import gitProile from '../../assets/profile/github.jpg' 
 

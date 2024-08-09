@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../Components/Header/Header.jsx'
+import Footer from '../Components/Footer/footer.jsx'
 import HomeContent from '../Components/HomeContent/HomeContent.jsx'
 
 
@@ -12,6 +13,7 @@ function Home() {
     <>
       <Header />
       <HomeContent />
+      <Footer />
     </>
   )
 }
