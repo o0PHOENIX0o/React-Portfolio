@@ -4,10 +4,10 @@ import styles from './ProductCard.module.css';
 function ProjectCard(props) { // Renamed to match convention
 
     const handleIconClick = (url, message) => {
-        if (message) {
-            alert(message);
-        } else {
+        if (url) {
             window.open(url, '_blank');
+        } else {
+            alert(message);
         }
     };
 
@@ -51,14 +51,19 @@ function ProjectCard(props) { // Renamed to match convention
                             </div>
 
                             <img
+                                onClick={() =>
+                                    handleIconClick(project.demoUrl, project.alertMessage)
+                                }
+
                                 src={project.img}
                                 alt={project.title}
                                 loading="lazy"
                             />
                         </figure>
 
-                        <h3 className={styles.projectTitle}>{project.title}</h3> {/* Use CSS module class */}
-                        <p className={styles.projectCategory}>{project.subTitle}</p> {/* Use CSS module class */}
+                        <h3 className={styles.projectTitle}>{project.title}</h3>
+                        <h4 className={styles.projectCategory}>{project.subTitle}</h4> 
+                        <p className={styles.description}>{project.description}</p>
                     </div>
                 </li>
             ))}

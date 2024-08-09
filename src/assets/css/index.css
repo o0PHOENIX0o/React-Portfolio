@@ -58,17 +58,37 @@ body{
 .projectList {
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-bottom: 10px;
 }
 
 
 
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+  width: 100%;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .projectList {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 @media (max-width: 600px) {
   .header ul li {
     margin: unset;
+  }
+
+  .projectList {
+    grid-template-columns: 1fr;
   }
 
   .header{
@@ -78,6 +98,13 @@ body{
 
 
 
+
 @media (max-width:350px) {
   .header ul li a { font-size: 12px;}  
+}
+
+@media (min-width: 1400px) {
+  .projectList {
+      grid-template-columns: repeat(4, 1fr);
+  }
 }

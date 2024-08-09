@@ -17,7 +17,6 @@ import node from '../../assets/logos/node.svg';
 import psql from '../../assets/logos/psql.svg';
 import python from '../../assets/logos/python.svg';
 import rasp from '../../assets/logos/rasp.svg';
-import sql from '../../assets/logos/sql.svg';
 
 
 function HomeContent() {
@@ -74,7 +73,6 @@ function HomeContent() {
                         <div><img src={psql} alt="PostgreSQL" /></div>
                         <div><img src={python} alt="Python" /></div>
                         <div><img src={rasp} alt="Raspberry Pi" /></div>
-                        <div><img src={sql} alt="SQL" /></div>
                     </div>
                 </div>
 
