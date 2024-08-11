@@ -8,6 +8,7 @@ function Contact(){
         <>
             <Header />
             <ContactDetails />
+            <Footer />
         </>
     )
 }

@@ -118,6 +118,8 @@ function Projects() {
                         <Project_card projects={projects} />
                     </ul>
             </div>
+
+            <Footer />
         </>
     );
 }
