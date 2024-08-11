@@ -7,7 +7,7 @@ function ProjectCard(props) { // Renamed to match convention
         if (url) {
             window.open(url, '_blank');
         } else {
-            alert(message);
+                
         }
     };
 
