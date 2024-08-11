@@ -1,5 +1,6 @@
 import React from "react";
 import Header from '../Components/Header/Header.jsx';
+import Footer from '../Components/Footer/footer.jsx'
 import Project_card from "../Components/projectCard/ProductCard.jsx";
 
 import shoppingWeb from '../assets/projects/Ecom-project.png'
