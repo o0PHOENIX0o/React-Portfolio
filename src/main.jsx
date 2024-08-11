@@ -20,4 +20,4 @@ root.render(
       </Routes>
     </BrowserRouter>
   </>,
-)
+);
