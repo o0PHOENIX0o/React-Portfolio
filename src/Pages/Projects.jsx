@@ -17,6 +17,7 @@ import ticTactoe from '../assets/projects/tic_tac_toe.png'
 import BlogPost from '../assets/projects/BlogPost.png'
 import TravelTracker from '../assets/projects/TravelTracker.png'
 import quizMaster from '../assets/projects/quizMaster.png'
+import ClassSchedule from '../assets/projects/ClassSchedule.png'
 
 import '../assets/css/index.css';
 
@@ -59,7 +60,15 @@ const projects = [
       alertMessage: "Contact me if you want to hire me to build your website!",
       description:"This project is a complete clothing e-commerce website built using HTML, CSS, and JavaScript for the frontend, with Flask as the backend API and MySQL as the database. The site offers a range of features designed to improve user experience and simplify the online shopping process for fashion enthusiasts"
     },
-
+    {
+      title: "Class Schedule Tracker",
+      subTitle: "Web Development",
+      img: ClassSchedule,
+      demoUrl: "https://class-schedule-rsin.vercel.app",
+      githubUrl: "https://github.com/o0PHOENIX0o/Class_Schedule",
+      alertMessage: "",
+      description:"This project is a Class Schedule web application built with React for the frontend. It helps students manage their daily schedules by providing easy access to timetables and subject syllabi. Key features include real-time class tracking, organized timetables for various student groups, and quick access to course materials, making it easier for students to stay organized and up-to-date with their academic responsibilities."
+    },
     {
       title: "Music Web App",
       subTitle: "Web Development",
