@@ -4,7 +4,6 @@ import Home from './Pages/Home.jsx'
 import Projects from './Pages/Projects.jsx'
 import Contact from './Pages/Contact.jsx'
 
-
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

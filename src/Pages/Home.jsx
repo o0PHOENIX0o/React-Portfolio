@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../Components/Header/Header.jsx'
 import Footer from '../Components/Footer/footer.jsx'
 import HomeContent from '../Components/HomeContent/HomeContent.jsx'
+import { Analytics } from "@vercel/analytics/react"
 
 
 import '../assets/css/index.css'
@@ -14,6 +15,7 @@ function Home() {
       <Header />
       <HomeContent />
       <Footer />
+      <Analytics/>
     </>
   )
 }
